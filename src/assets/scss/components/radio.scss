@@ -1,0 +1,97 @@
+@import "../mixins/colors.scss";
+
+// .ess.radio input {
+//   display: none;
+// }
+
+.ess.radio {
+  font-weight: 500;
+  user-select: none;
+  padding-left: 22px;
+  position: relative;
+  display: inline-block;
+}
+
+.ess.radio input[type=radio] {
+  top: 0;
+  left: 0;
+  margin: 0;
+  width: 20px;
+  height: 20px;
+  outline: none;
+  cursor: pointer;
+  appearance: none;
+  position: absolute;
+  border-radius: 100%;
+  border: 2px solid rgba(0, 0, 0, 0.4);
+}
+
+.ess.radio.dark input[type=radio] {
+  border: 2px solid rgba(0, 0, 0, 1);
+}
+
+.ess.radio input[type=radio]::after {
+  top: 2px;
+  left: 2px;
+  opacity: 0;
+  content: '';
+  width: 12px;
+  height: 12px;
+  position: absolute;
+  border-radius: 100%;
+  background: rgba(0, 0, 0, 0.4);
+}
+
+.ess.radio.dark input[type=radio]::after {
+  background: rgba(0, 0, 0, 1);
+}
+
+.ess.radio input[type=radio]:checked::after {
+  opacity: 1;
+  animation: pulse 500ms forwards ease-in-out;
+}
+
+.ess.radio input[type=radio]:checked.shadow {
+  box-shadow: 0px 4px 8px #C8CFDB, 0px 0px 4px #C8CFDB;
+}
+
+.ess.radio label {
+  cursor: pointer;
+  font-size: 14px;
+  color: #000000;
+  padding-left: 5px;
+}
+
+.ess.radio.dark label {
+  color: rgba(255, 255, 255, 0.6);
+}
+
+@keyframes pulse {
+  0%   {transform: scale(0);}
+  50%  {transform: scale(1.8);}
+  75%  {transform: scale(0.8);}
+  100% {transform: scale(1);}
+}
+
+@each $name, $hex in $colors {
+  .ess.radio input[type=radio].#{$name} {
+    background: transparent;
+  }
+  
+  .ess.radio.dark input[type=radio].#{$name} {
+    background: transparent;
+    border: 2px solid color($name);
+  }
+
+  .ess.radio input[type=radio].#{$name}:checked {
+    border: 2px solid color($name);
+  }
+
+  .ess.radio input[type=radio].#{$name}:checked::after {
+    background: color($name);
+  }
+  
+  .ess.radio input[type=radio].#{$name}.illuminate:checked {
+    box-shadow: 0px 4px 16px rgba(color($name), 0.75);
+  }
+}

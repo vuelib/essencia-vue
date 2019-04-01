@@ -1,14 +1,43 @@
 {
-  "name": "essencia-ui-vue",
+  "name": "@essencia/essencia-vue",
   "version": "0.1.0",
-  "private": true,
+  "private": false,
+  "main": "essencia-ui.js",
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/essencia-ui/essencia-vue"
+  },
+  "keywords": [
+    "css",
+    "vue",
+    "app",
+    "sass",
+    "scss",
+    "design",
+    "flexbox",
+    "essencia",
+    "responsive",
+    "framework",
+    "application"
+  ],
+  "author": "Bruno Santos <bruno.dos1997@gmail.com>",
+  "contributors": [
+    "Carlos Henrique Escouto <carloshenriqueescouto@gmail.com>",
+    "Gus <gus@brid-it.com>"
+  ],
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/essencia-ui/essencia-vue/issues"
+  },
   "scripts": {
     "serve": "vue-cli-service serve",
     "build": "vue-cli-service build",
     "lint": "vue-cli-service lint"
   },
   "dependencies": {
-    "vue": "^2.6.6"
+    "vue": "^2.6.6",
+    "vue-loader": "^15.7.0",
+    "vue-ripple-directive": "^2.0.1"
   },
   "devDependencies": {
     "@vue/cli-plugin-babel": "^3.5.0",

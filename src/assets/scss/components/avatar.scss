@@ -1,0 +1,28 @@
+img.ess.avatar {
+  width: 42px;
+  height: 42px;
+  cursor: pointer;
+  user-select: none;
+}
+
+img.ess.avatar.square {
+  border-radius: none;
+}
+
+img.ess.avatar.rounded {
+  border-radius: 6px;
+}
+
+img.ess.avatar.circle {
+  border-radius: 100%;
+}
+
+img.ess.avatar.small {
+  width: 32px;
+  height: 32px;
+}
+
+img.ess.avatar.big {
+  width: 48px;
+  height: 48px;
+}
