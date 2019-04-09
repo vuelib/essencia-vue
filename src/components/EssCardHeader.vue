@@ -1,25 +1,20 @@
 <template>
-  <div class="ess card" :class="[canShape, canColor, canShadow, isDark]">
+  <div class="ess header" :class="[canShape, canColor, isDark]">
     <slot></slot>
   </div>
 </template>
 
 <script>
 export default {
-  name: 'EssCard',
+  name: 'EssCardHeader',
   props: {
     shape: {
       type: String,
-      default: "rounded" // square, rounded
+      default: 'rounded' // square, rounded
     },
     color: {
       type: String,
-      default: null
-    },
-    shadow: {
-      type: Boolean,
-      required: false,
-      default: false,
+      default: null,
     },
     dark: {
       type: Boolean,
@@ -33,23 +28,17 @@ export default {
       const validShapes = ['square', 'rounded'];
 
       if (validShapes.includes(this.shape)) {
+        if (this.shape === 'rounded') {
+          return 'rounded-top';
+        }
+
         return this.shape;
       }
-
-      return 'rounded';
     },
     canColor() {
       
       if (this.color) {
         return `bg-${this.color}`;
-      }
-
-      return null;
-    },
-    canShadow() {
-
-      if (this.shadow) {
-        return (this.isDark) ? 'shadow-dark' : 'shadow-light'
       }
 
       return null;

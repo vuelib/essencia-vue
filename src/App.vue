@@ -1,107 +1,96 @@
 <template>
-  <div id="app" style="display: flex;">
-
-    <ess-card :dark="dark" shadow style="margin: 20px; padding: 20px 0; width: 450px;">
-      <ess-list :dark="dark">
-
-        <ess-list-item separator>
-          <ess-list-tile gutter="big" auto>
-            <ess-avatar shape="circle" :src="require('@/assets/images/logo.png')" />
-          </ess-list-tile>
-          
-          <ess-list-tile wrap>
-            <ess-list-tile>
-              <h3 style="margin: 0"> {{ name }} </h3>
-            </ess-list-tile>
-            <ess-list-tile>
-              <span> {{ (lang === 'en') ? 'Visit profile' : 'Visitar Perfil' }} </span>
-            </ess-list-tile>
-          </ess-list-tile>
-          
-          <ess-list-tile gutter="small" separator="left" auto>
-            <ess-float-button shape="circle" design="clean" >
-              <i class="fas fa-cog"></i>
-            </ess-float-button>
-          </ess-list-tile>
-        </ess-list-item>
-        
-        <ess-list-item separator highlight>
-          <ess-list-tile gutter="big" auto limit-height>
-            <i class="fas fa-user"></i>
-          </ess-list-tile>
-
-          <ess-list-tile wrap>
-            <ess-list-tile>
-              <h3> {{ (lang === 'en') ? 'Profile' : 'Perfil' }} </h3>
-            </ess-list-tile>
-            <ess-list-tile auto>
-              <ess-input shape="pill" design="outlined" placeholder="Digite seu nome" :dark="dark" :shadow="shadow" :illuminate="illuminate" v-model="name"> Name </ess-input>
-            </ess-list-tile>
-            <ess-list-tile auto>
-              <ess-input placeholder="Digite seu nome" :dark="dark" :shadow="shadow" :illuminate="illuminate" v-model="name" disabled> Name </ess-input>
-            </ess-list-tile>
-            <ess-list-tile style="margin-top: 20px;">
-              <ess-button :shadow="shadow" :illuminate="illuminate"> Salvar Alterações </ess-button>
-              <ess-float-button :shadow="shadow" :illuminate="illuminate" style="position: relative; left: 10px;">
-                <i class="fas fa-save"></i>
-              </ess-float-button>
-            </ess-list-tile>
-          </ess-list-tile>
-        </ess-list-item>
-        
-        <ess-list-item separator highlight>
-          <ess-list-tile gutter="big" auto limit-height>
-            <i class="fas fa-comments"></i>
-          </ess-list-tile>
-
-          <ess-list-tile wrap>
-            <ess-list-tile>
-              <h3> {{ (lang === 'en') ? 'Messages' : 'Mensagens' }} </h3>
-            </ess-list-tile>
-            <ess-list-tile auto>
-              <ess-badge :dark="dark" :shadow="shadow" :illuminate="illuminate"> Awesome message <i class="fas fa-heart"></i> </ess-badge>
-              <ess-badge color="blue" :dark="dark" :shadow="shadow" :illuminate="illuminate" style="margin-left: 10px;"> V1.0.0 </ess-badge>
-            </ess-list-tile>
-          </ess-list-tile>
-        </ess-list-item>
-        
-        <ess-list-item separator highlight>
-          <ess-list-tile gutter="big" auto limit-height>
-            <i class="fas fa-cog"></i>
-          </ess-list-tile>
-
-          <ess-list-tile wrap>
-            <ess-list-tile>
-              <h3> {{ (lang === 'en') ? 'Settings' : 'Configurações' }} </h3>
-            </ess-list-tile>
-            <ess-list-tile auto>
-              <span> Lorem ipsum, dolor sit amet consectetur adipisicing elit. </span>
-            </ess-list-tile>
-            <ess-list-tile style="margin-top: 20px;">
-              <ess-checkbox :dark="dark" :shadow="shadow" :illuminate="illuminate" id="theme" v-model="dark"> Enable Dark Theme </ess-checkbox>
-            </ess-list-tile>
-            <ess-list-tile style="margin-top: 20px;">
-              <ess-checkbox :dark="dark" :shadow="shadow" :illuminate="illuminate" id="shadow" v-model="shadow"> Enable Component Shadow </ess-checkbox>
-            </ess-list-tile>
-            <ess-list-tile style="margin-top: 20px;">
-              <ess-switch :dark="dark" :shadow="shadow" :illuminate="illuminate" id="illumination" v-model="illuminate"> Enable Component Illumination </ess-switch>
-            </ess-list-tile>
-            <ess-list-tile style="margin-top: 20px;">
-              <ess-radio name="lang" value="en" :dark="dark" :shadow="shadow" :illuminate="illuminate" v-model="lang"> Translate English </ess-radio>
-              <ess-radio name="lang" value="pt-BR" :dark="dark" :shadow="shadow" :illuminate="illuminate" v-model="lang" style="margin-left: 20px"> Translate Portuguese </ess-radio>
-            </ess-list-tile>
-          </ess-list-tile>
-        </ess-list-item>
-
-
-      </ess-list>
+  <div id="app">
+    <!-- <ess-card shadow>
+      <ess-card-header title="Card" description="Description for to card...." />
+    </ess-card>
+    
+    <ess-card dark shadow style="margin-left: 20px;">
+      <ess-card-header title="Card" description="Description for to card...." dark />
     </ess-card>
 
+    <ess-card shadow style="margin-left: 20px;">
+      <ess-card-header title="Card" description="Description for to card...." color="blue" />
+    </ess-card>-->
+
+    <!-- <ess-card shadow>
+      <ess-card-header>
+        <h4 class="ess font-bold font-size-18px font-color-dark-100per" style="margin: 0">
+          Card
+        </h4>
+        <p class="ess font-regular font-size-16px font-color-dark-40per" style="margin: 0; margin-top: 10px">
+          Lorem ipsum, dolor sit amet consectetur adipisicing elit. Nostrum blanditiis vitae quibusdam.
+        </p>
+      </ess-card-header>
+      <div class="ess container">
+        Container
+      </div>
+    </ess-card>
+    <br />
+    <br />
+    
+    <ess-card dark shadow>
+      <ess-card-header>
+        <h4 class="ess font-bold font-size-18px font-color-light-100per" style="margin: 0">
+          Card
+        </h4>
+        <p class="ess font-regular font-size-16px font-color-light-40per" style="margin: 0; margin-top: 10px">
+          Lorem ipsum, dolor sit amet consectetur adipisicing elit. Nostrum blanditiis vitae quibusdam.
+        </p>
+      </ess-card-header>
+      <div class="ess container">
+        Container
+      </div>
+    </ess-card>
+    <br />
+    <br />
+    
+    <ess-card color="blue" shadow>
+      <ess-card-header>
+        <h4 class="ess font-bold font-size-18px" style="margin: 0">
+          Card
+        </h4>
+        <p class="ess font-regular font-size-16px font-color-light-60per" style="margin: 0; margin-top: 10px">
+          Lorem ipsum, dolor sit amet consectetur adipisicing elit. Nostrum blanditiis vitae quibusdam.
+        </p>
+      </ess-card-header>
+      <div class="ess container">
+        Container
+      </div>
+    </ess-card>
+    <br />
+    <br />-->
+
+    <ess-card shadow>
+      <ess-card-header color="turquoise">
+        <h4 class="ess font-bold font-size-18px" style="margin: 0">Card</h4>
+        <p
+          class="ess font-regular font-size-16px font-color-light-80per"
+          style="margin: 0;"
+        >Lorem ipsum, dolor sit amet consectetur adipisicing elit. Nostrum blanditiis vitae quibusdam.</p>
+      </ess-card-header>
+      <ess-card-content>
+        <ess-select v-model="option" :options="[
+          {label: 'Option 11', value: 'opt1'},
+          {label: 'Option 22', value: 'opt2'},
+          {label: 'Option 33', value: 'opt3'},
+        ]"> Select </ess-select>
+
+
+      </ess-card-content>
+      <ess-card-footer>
+        <ess-button color="pink">Lorem ipsum dolor sit amet.</ess-button>
+      </ess-card-footer>
+    </ess-card>
   </div>
 </template>
 
 <script>
+import EssMenu from "@/components/EssMenu";
 import EssCard from "@/components/EssCard";
+import EssCardHeader from "@/components/EssCardHeader";
+import EssCardContent from "@/components/EssCardContent";
+import EssCardFooter from "@/components/EssCardFooter";
+import EssSelect from "@/components/EssSelect";
 import EssList from "@/components/EssList";
 import EssBadge from "@/components/EssBadge";
 import EssRadio from "@/components/EssRadio";
@@ -115,9 +104,14 @@ import EssListItem from "@/components/EssListItem";
 import EssListTile from "@/components/EssListTile";
 
 export default {
-  name: 'App',
+  name: "App",
   components: {
+    EssMenu,
     EssCard,
+    EssCardHeader,
+    EssCardContent,
+    EssCardFooter,
+    EssSelect,
     EssList,
     EssBadge,
     EssRadio,
@@ -128,15 +122,16 @@ export default {
     EssCheckbox,
     EssFloatButton,
     EssListItem,
-    EssListTile,
+    EssListTile
   },
   data() {
     return {
       dark: false,
-      lang: 'pt-BR',
+      lang: "pt-BR",
       shadow: false,
       illuminate: false,
-      name: 'Essencia UI',
+      name: "Essencia UI",
+      option: 'opt3'
     };
   },
   watch: {
@@ -149,16 +144,22 @@ export default {
       if (this.illuminate) {
         this.shadow = false;
       }
-    },
+    }
   }
 };
 </script>
 
-<style>
-*, *:before, *:after {
-    -webkit-box-sizing: border-box;
-       -moz-box-sizing: border-box;
-            box-sizing: border-box;
+<style lang="scss">
+*,
+*:before,
+*:after {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
 }
+
+@import url("https://use.fontawesome.com/releases/v5.8.1/css/all.css");
+
+@import "./assets/scss/main";
 </style>
 

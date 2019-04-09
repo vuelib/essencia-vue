@@ -24,7 +24,3 @@ export default {
   }
 }
 </script>
-
-<style lang="scss">
-@import '../assets/scss/components/avatar.scss';
-</style>

@@ -1,12 +1,11 @@
 import Vue from 'vue'
 import App from './App.vue'
-import Ripple from 'vue-ripple-directive'
+// import Ripple from 'vue-ripple-directive'
+import ClickOutside from './directives/ClickOutside'
 
 Vue.config.productionTip = false
 
-Ripple.color = 'rgba(0, 0, 0, 0.08)';
-
-Vue.directive('ripple', Ripple);
+Vue.directive('click-outside', ClickOutside);
 
 new Vue({
   render: h => h(App),

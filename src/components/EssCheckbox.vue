@@ -61,7 +61,3 @@ export default {
   }
 };
 </script>
-
-<style lang="scss">
-@import '../assets/scss/components/checkbox.scss';
-</style>

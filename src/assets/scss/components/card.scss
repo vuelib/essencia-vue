@@ -1,26 +1,13 @@
 .ess.card {
   display: flex;
+  flex-wrap: wrap;
+  color: font-dark(60);
   background: #FFFFFF;
 }
 
 .ess.card.dark {
+  color: font-light(40);
   background: #262626;
-}
-
-.ess.card.square {
-  border-radius: none;
-}
-
-.ess.card.rounded {
-  border-radius: 12px;
-}
-
-.ess.card.outlined {
-  border: 1px solid #C8CFDB;
-}
-
-.ess.card.dark.outlined {
-  border: 1px solid #000000;
 }
 
 .ess.card.shadow {
@@ -29,4 +16,14 @@
 
 .ess.card.dark.shadow {
   box-shadow: 0px 0px 16px rgba(0, 0, 0, 0.2);
+}
+
+.ess.card .header {
+  width: 100%;
+  padding: 20px 40px;
+}
+
+.ess.card .footer {
+  width: 100%;
+  padding: 20px 40px;
 }

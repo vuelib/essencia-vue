@@ -1,24 +1,21 @@
 <template>
-  <div >
+  <!-- <div > -->
 
     <button
-      v-if="!route"
-      v-ripple
       class="ess"
-      :class="[shape, design, size, color, canShadow, canIllumination]"
       :disabled="disabled"
+      :class="[shape, design, size, color, canShadow, canIllumination]"
     > <slot></slot> </button>
 
-    <router-link
+    <!-- <router-link
       v-if="route"
-      v-ripple
       class="ess button"
       :to="route"
       :class="[shape, design, size, color, canShadow, canIllumination]"
       :disabled="disabled"
     > <slot></slot> </router-link>
 
-  </div>
+  </div> -->
 </template>
 
 <script>
@@ -53,23 +50,14 @@ export default {
       type: Boolean,
       default: false
     },
-    route: {
-      type: String,
-      default: null
-    },
   },
   computed: {
     canShadow() {
       return (this.shadow) ? 'shadow' : null;
     },
-    
     canIllumination() {
       return (this.illuminate) ? 'illuminate' : null;
     },
   }
 };
 </script>
-
-<style lang="scss">
-@import '../assets/scss/components/button.scss';
-</style>

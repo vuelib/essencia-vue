@@ -11,7 +11,10 @@
       :placeholder="placeholder"
       :value="value"
       :disabled="disabled"
+      :autocomplete="canAutocomplete"
       @input="$emit('input', $event.target.value)"
+      @focus="$emit('onFocus')"
+      @blur="$emit('onBlur')"
     />
   </div>
 </template>
@@ -65,7 +68,12 @@ export default {
     disabled: {
       type: Boolean,
       required: false,
-      default: null
+      default: false
+    },
+    autocomplete: {
+      type: Boolean,
+      required: false,
+      default: true
     },
     value: {
       type: String,
@@ -84,10 +92,10 @@ export default {
     canIllumination() {
       return (this.illuminate) ? 'illuminate' : null;
     },
+    
+    canAutocomplete() {
+      return (this.autocomplete) ? 'on' : 'off';
+    },
   }
 }
 </script>
-
-<style lang="scss">
-@import '../assets/scss/components/input-text.scss';
-</style>
