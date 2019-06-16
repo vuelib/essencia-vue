@@ -85,44 +85,44 @@
 </template>
 
 <script>
-import EssMenu from "@/components/EssMenu";
+// import EssMenu from "@/components/EssMenu";
 import EssCard from "@/components/EssCard";
 import EssCardHeader from "@/components/EssCardHeader";
 import EssCardContent from "@/components/EssCardContent";
 import EssCardFooter from "@/components/EssCardFooter";
 import EssSelect from "@/components/EssSelect";
-import EssList from "@/components/EssList";
-import EssBadge from "@/components/EssBadge";
-import EssRadio from "@/components/EssRadio";
-import EssInput from "@/components/EssInput";
+// import EssList from "@/components/EssList";
+// import EssBadge from "@/components/EssBadge";
+// import EssRadio from "@/components/EssRadio";
+// import EssInput from "@/components/EssInput";
 import EssButton from "@/components/EssButton";
-import EssAvatar from "@/components/EssAvatar";
-import EssSwitch from "@/components/EssSwitch";
-import EssCheckbox from "@/components/EssCheckbox";
-import EssFloatButton from "@/components/EssFloatButton";
-import EssListItem from "@/components/EssListItem";
-import EssListTile from "@/components/EssListTile";
+// import EssAvatar from "@/components/EssAvatar";
+// import EssSwitch from "@/components/EssSwitch";
+// import EssCheckbox from "@/components/EssCheckbox";
+// import EssFloatButton from "@/components/EssFloatButton";
+// import EssListItem from "@/components/EssListItem";
+// import EssListTile from "@/components/EssListTile";
 
 export default {
   name: "App",
   components: {
-    EssMenu,
+    // EssMenu,
     EssCard,
     EssCardHeader,
     EssCardContent,
     EssCardFooter,
     EssSelect,
-    EssList,
-    EssBadge,
-    EssRadio,
-    EssInput,
-    EssAvatar,
+    // EssList,
+    // EssBadge,
+    // EssRadio,
+    // EssInput,
+    // EssAvatar,
     EssButton,
-    EssSwitch,
-    EssCheckbox,
-    EssFloatButton,
-    EssListItem,
-    EssListTile
+    // EssSwitch,
+    // EssCheckbox,
+    // EssFloatButton,
+    // EssListItem,
+    // EssListTile
   },
   data() {
     return {

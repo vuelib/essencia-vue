@@ -56,7 +56,9 @@ export default {
     options: {
       type: Array,
       required: true,
-      default: [],
+      default() {
+        return [];
+      },
     },
     value: {
       type: String,

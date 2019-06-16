@@ -13,9 +13,9 @@
 <script>
 
 import Popper from "popper.js";
-import generateHash from "random-hash";
+// import generateHash from "random-hash";
 
-import EssCard from "./EssCard";
+// import EssCard from "./EssCard";
 
 export default {
   name: "EssMenu",
@@ -30,7 +30,7 @@ export default {
     }
   },
   components: {
-    EssCard
+    // EssCard
   },
   data() {
     return {
