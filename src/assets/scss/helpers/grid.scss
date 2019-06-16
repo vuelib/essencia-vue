@@ -90,7 +90,8 @@ $grid-container-outer-padding: 40px !default;
 
 .ess.col {
   // padding: 0 $grid-col-gutter; 
-  padding-right: $grid-col-gutter; 
+  padding: 0 $grid-col-gutter / 2;
+  box-sizing: border-box;
 }
 
 .ess.col.show { 
