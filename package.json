@@ -1,6 +1,6 @@
 {
   "name": "@essencia/essencia-vue",
-  "version": "0.1.6",
+  "version": "0.1.7",
   "private": false,
   "main": "essencia-ui.js",
   "style": "./src/scss/main.scss",
@@ -40,18 +40,18 @@
     "popper.js": "^1.15.0",
     "random-hash": "^4.0.1",
     "vue": "^2.6.10",
-    "vue-loader": "^15.7.0",
+    "vue-loader": "^15.7.1",
     "vue-ripple-directive": "^2.0.1"
   },
   "devDependencies": {
-    "@vue/cli-plugin-babel": "^3.8.0",
-    "@vue/cli-plugin-eslint": "^3.8.0",
-    "@vue/cli-service": "^3.8.4",
-    "babel-eslint": "^10.0.1",
+    "@vue/cli-plugin-babel": "^3.11.0",
+    "@vue/cli-plugin-eslint": "^3.11.0",
+    "@vue/cli-service": "^3.11.0",
+    "babel-eslint": "^10.0.3",
     "eslint": "^5.16.0",
-    "eslint-plugin-vue": "^5.0.0",
+    "eslint-plugin-vue": "^5.2.3",
     "node-sass": "^4.12.0",
-    "sass-loader": "^7.1.0",
+    "sass-loader": "^7.3.1",
     "vue-template-compiler": "^2.6.10"
   }
 }
