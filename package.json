@@ -1,6 +1,6 @@
 {
   "name": "@essencia/essencia-vue",
-  "version": "0.1.7",
+  "version": "1.0.0",
   "private": false,
   "main": "essencia-ui.js",
   "style": "./src/scss/main.scss",
@@ -31,27 +31,36 @@
     "url": "https://github.com/essencia-ui/essencia-vue/issues"
   },
   "scripts": {
+    "lint": "vue-cli-service lint",
     "serve": "vue-cli-service serve",
     "build": "vue-cli-service build",
-    "lint": "vue-cli-service lint"
+    "test:e2e": "vue-cli-service test:e2e",
+    "test:unit": "vue-cli-service test:unit"
   },
   "dependencies": {
-    "axios": "^0.18.1",
-    "popper.js": "^1.15.0",
-    "random-hash": "^4.0.1",
     "vue": "^2.6.10",
-    "vue-loader": "^15.7.1",
-    "vue-ripple-directive": "^2.0.1"
+    "uuid": "^3.3.3",
+    "zxcvbn": "^4.4.2",
+    "core-js": "^2.6.9",
+    "lodash": "^4.17.15",
+    "popper.js": "^1.15.0",
+    "@types/lodash": "^4.14.138",
+    "vue-class-component": "^7.1.0",
+    "vue-property-decorator": "^8.2.2"
   },
   "devDependencies": {
-    "@vue/cli-plugin-babel": "^3.11.0",
-    "@vue/cli-plugin-eslint": "^3.11.0",
-    "@vue/cli-service": "^3.11.0",
-    "babel-eslint": "^10.0.3",
-    "eslint": "^5.16.0",
-    "eslint-plugin-vue": "^5.2.3",
-    "node-sass": "^4.12.0",
+    "chai": "^4.1.2",
+    "sass": "^1.22.10",
+    "typescript": "^3.6.2",
     "sass-loader": "^7.3.1",
-    "vue-template-compiler": "^2.6.10"
+    "@types/chai": "^4.2.0",
+    "@types/mocha": "^5.2.7",
+    "@vue/cli-service": "^3.11.0",
+    "@vue/cli-plugin-babel": "^3.11.0",
+    "@vue/test-utils": "1.0.0-beta.29",
+    "vue-template-compiler": "^2.5.21",
+    "@vue/cli-plugin-typescript": "^3.11.0",
+    "@vue/cli-plugin-unit-mocha": "^3.11.0",
+    "@vue/cli-plugin-e2e-cypress": "^3.11.0"
   }
 }

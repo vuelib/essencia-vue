@@ -1,0 +1,106 @@
+// BUTTON
+
+button.ess,
+input[type=reset].ess
+input[type=button].ess
+input[type=submit].ess {
+  float: left;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  font-size: 12px;
+  font-weight: 700;
+  overflow: visible;
+  user-select: none;
+  padding: 12px 32px;
+  border-radius: 12px;
+  line-height: normal;
+  text-align: justify;
+  -webkit-appearance: none;
+  transition: 200ms all ease-in;
+  -webkit-font-smoothing: inherit;
+  -moz-osx-font-smoothing: inherit;
+}
+
+button.ess.pill,
+input[type=reset].ess.pill
+input[type=button].ess.pill
+input[type=submit].ess.pill {
+  border-radius: 99999px;
+}
+
+button.ess:disabled,
+input[type=reset].ess:disabled
+input[type=button].ess:disabled
+input[type=submit].ess:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+button.ess.clean,
+input[type=reset].ess.clean
+input[type=button].ess.clean
+input[type=submit].ess.clean {
+  color: #000000;
+  background: transparent;
+}
+
+button.ess.clean:hover,
+input[type=reset].ess.clean:hover
+input[type=button].ess.clean:hover
+input[type=submit].ess.clean:hover {
+  background: rgba(#000000, .2);
+}
+
+button.ess.blue,
+input[type=reset].ess.blue
+input[type=button].ess.blue
+input[type=submit].ess.blue {
+  color: #ffffff;
+  background: #0082FF;
+}
+
+button.ess.blue:hover,
+input[type=reset].ess.blue:hover
+input[type=button].ess.blue:hover
+input[type=submit].ess.blue:hover {
+  color: #ffffff;
+  background: darken(#0082FF, 5%);
+}
+
+button.ess.clean.blue,
+input[type=reset].ess.clean.blue
+input[type=button].ess.clean.blue
+input[type=submit].ess.clean.blue {
+  color: #0082FF;
+  background: transparent;
+}
+
+button.ess.clean.blue:hover,
+input[type=reset].ess.clean.blue:hover
+input[type=button].ess.clean.blue:hover
+input[type=submit].ess.clean.blue:hover {
+  color: #0082FF;
+  background: rgba(#0082FF, .2);
+}
+
+// FLOAT BUTTON
+
+button.ess.float,
+input[type=reset].ess.float
+input[type=button].ess.float
+input[type=submit].ess.float {
+  margin: 0;
+  padding: 0;
+  width: 40px;
+  height: 40px;
+  font-size: 14px;
+  text-align: center;
+}
+
+button.ess.float.circle,
+input[type=reset].ess.float.circle
+input[type=button].ess.float.circle
+input[type=submit].ess.float.circle {
+  border-radius: 99999px;
+}

@@ -1,0 +1,23 @@
+.ess.progress-bar {
+  width: 100%;
+  position: relative;
+}
+
+.ess.progress-bar > .ess.bar-background {
+  top: 0;
+  left: 0;
+  width: 100%;
+  position: relative;
+  background: #c8cfdb;
+}
+
+.ess.progress-bar > .ess.bar {
+  left: 0;
+  bottom: 0;
+  position: absolute;
+  transition: all 500ms ease-in-out;
+}
+
+.ess.progress-bar > .ess.bar.blue {
+  background: #0084FF;
+}

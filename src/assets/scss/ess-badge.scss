@@ -1,0 +1,51 @@
+.ess.badge {
+  float: left;
+  cursor: pointer;
+  font-size: 12px;
+  font-weight: 700;
+  user-select: none;
+  padding: 12px 32px;
+  border-radius: 12px;
+  line-height: normal;
+  text-align: justify;
+  transition: 200ms all ease-in;
+  -webkit-font-smoothing: inherit;
+  -moz-osx-font-smoothing: inherit;
+}
+
+.ess.badge.small {
+  font-size: 10px;
+  padding: 6px 32px;
+  border-radius: 10px;
+}
+
+.ess.badge.pill {
+  border-radius: 9999px;
+}
+
+.ess.badge.dark {
+  color: #FFFFFF;
+  background: #444444;
+}
+
+.ess.badge.light {
+  color: #444444;
+  background: #FFFFFF;
+}
+
+.ess.badge.blue {
+  color: #FFFFFF;
+  background: #0084FF;
+}
+
+.ess.badge.small i {
+  font-size: 10px;
+}
+
+.ess.badge i.left {
+  padding-right: 8px;
+}
+
+.ess.badge i.right {
+  padding-left: 8px;
+}

@@ -1,0 +1,29 @@
+.ess.avatar {
+  cursor: pointer;
+  user-select: none;
+  border-radius: 12px;
+}
+
+.ess.avatar.circle {
+  border-radius: 999px;
+}
+
+.ess.avatar.sm {
+  width: 20px;
+  height: 20px;
+}
+
+.ess.avatar.md {
+  width: 48px;
+  height: 48px;
+}
+
+.ess.avatar.lg {
+  width: 80px;
+  height: 80px;
+}
+
+.ess.avatar.xl {
+  width: 110px;
+  height: 100px;
+}
