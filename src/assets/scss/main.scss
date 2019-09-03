@@ -1,18 +1,15 @@
 
 // DEFAULT
-
 @import url("https://yarnpkg.com/en/package/normalize.css");
 @import url("https://use.fontawesome.com/releases/v5.8.1/css/all.css");
 @import url('https://fonts.googleapis.com/css?family=Lato:300,400,600,700');
 @import url("https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.0/animate.min.css");
 
 // CORE
-
 @import '@/assets/scss/ess-grid.scss';
 @import '@/assets/scss/ess-typography.scss';
 
 // COMPONENTS
-
 @import '@/assets/scss/ess-tabs.scss';
 @import '@/assets/scss/ess-badge.scss';
 @import '@/assets/scss/ess-avatar.scss';

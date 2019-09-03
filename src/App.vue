@@ -26,6 +26,7 @@
         <ess-tabs v-model="tab">
           <ess-tab name="user"> User </ess-tab>
           <ess-tab name="profile"> Profile </ess-tab>
+          <ess-tab name="carlos"> Carlos </ess-tab>
         </ess-tabs>
       </div>
 
@@ -52,6 +53,19 @@
               <ess-input-password label="Confirm Password" placeholder="Ex. jhon_doe@example.com" text-tip="Enter your email address, it will be used to sign in with the application." icon-text-tip="fas fa-envelope" />
             </div>
           </div>
+         
+          <div class="ess row" >
+            <div class="ess col lg-12">
+              <ess-stepper v-model="stepper" ref="stepper">
+                <ess-step icon="fas fa-user" name="user" :validate="validate()"/>
+                <ess-step icon="fas fa-cog" name="settings" :validate="validate2()"/>
+              </ess-stepper>
+              <ess-button @click.native="$refs.stepper.previous()">Back</ess-button>
+              <ess-button @click.native="$refs.stepper.next()">Next</ess-button>
+            </div>
+          </div>
+
+
 
         </div>
       </div>
@@ -112,7 +126,7 @@ export default class App extends Vue {
   private message: string | null = '';
   private password: string | null = '';
   private progress: number | null = 50;
-  private stepper: string | null = 'cog';
+  private stepper: string | null = 'user';
 
   constructor() {
     super();
@@ -120,7 +134,7 @@ export default class App extends Vue {
 
   public validate(): object {
     return {
-      valid: true,
+      valid: false,
       message: 'Nisi sint amet sint reprehenderit aute ea eu ullamco esse.',
     };
   }

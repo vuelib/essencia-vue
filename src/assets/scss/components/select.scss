@@ -1,0 +1,72 @@
+.ess.select {
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.ess.select label {
+  width: 100%;
+  margin: 8px 8px;
+  cursor: pointer;
+  font-size: 14px;
+  color: #000000;
+}
+
+.ess.select.dark label {
+  color: rgba(255, 255, 255, 0.6);
+}
+
+.ess.select select.ess {
+  margin: 0;
+  width: 100%;
+  outline: none;
+  font-size: 14px;
+  min-height: 42px;
+  appearance: none;
+  padding: 0px 20px;
+  overflow: visible;
+  text-align: justify;
+  line-height: normal;
+  font-weight: regular;
+  display: inline-block;
+  background: transparent;
+  transition: 200ms all ease-in;
+  -webkit-font-smoothing: inherit;
+  -moz-osx-font-smoothing: inherit;
+  border: 1px solid rgba(0, 0, 0, 0.4);
+}
+
+.ess.select.dark select.ess {
+  color: rgba(255, 255, 255, 0.4);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.ess.select select.ess:disabled {
+  opacity: .3;
+  cursor: not-allowed;
+}
+
+.ess.select select.ess.rounded {
+  border-radius: 6px;
+}
+
+.ess.select select.ess.pill {
+  border-radius: 9999px;
+}
+
+@each $name, $hex in $colors {
+
+  .ess.select select.ess.filled.#{$name} {
+    border: none;
+    color: #FFFFFF;
+    background: color($name);
+  }
+
+  .ess.select select.ess.outlined.#{$name} {
+    background: transparent;
+  }
+
+  .ess.select select.ess.outlined.#{$name}:focus {
+    border: 1px solid color($name);
+  }
+}

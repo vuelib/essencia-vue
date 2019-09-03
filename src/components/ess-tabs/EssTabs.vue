@@ -8,68 +8,50 @@
 </template>
 
 <script lang="ts">
-import { find, findIndex } from 'lodash';
+
 import { Prop, Watch, Component, Vue } from 'vue-property-decorator';
 
-import _ from 'lodash';
+import EssTabsMixin from './mixins/EssTabsMixin';
 
 @Component({
   name: 'EssTabs',
-  model: {
-    prop: 'value',
-    event: 'change',
-  },
 })
-export default class EssTabs extends Vue {
-  private tabs: any[] = [];
-  private countTabs: number = 0;
-  private currentTab: number = 0;
-
-  private indicatorPosX: number = 0;
-  private indicatorWidth: number = 0;
+export default class EssTabs extends EssTabsMixin {
 
   @Prop({ required: false, default: 'blue' })
   private color!: string;
 
-  @Prop({ required: true })
-  private value!: string;
+  private indicatorPosX: number = 0;
+  private indicatorWidth: number = 0;
 
   constructor() {
+    
     super();
   }
 
-  @Watch('value')
-  public handle() {
-    this.setCurrentTab(this.value);
-  }
-
   get indicatorStyle(): object {
+
     return {
       left: `${this.indicatorPosX}px`,
       width: `${this.indicatorWidth}px`,
     };
   }
 
-  private mounted(): void {
+  protected mounted(): void {
+
     this.$nextTick().then(() => {
-      this.tabs = this.mapTabs();
       this.setCurrentTab(this.value);
     });
   }
 
-  private mapTabs(): any {
-    return this.$children.filter((item: any) => {
-      return item.$el instanceof HTMLLIElement;
-    });
-  }
-
   private setCurrentTab(name: string) {
-    const tab = _.find(this.tabs, ['name', name]);
+    
+    const child: HTMLLIElement = this.getChildByName(name);
 
-    this.indicatorPosX = tab.$el.offsetLeft;
-    this.indicatorWidth = tab.$el.offsetWidth;
+    this.indicatorPosX = child.offsetLeft;
+    this.indicatorWidth = child.offsetWidth;
 
-    this.$emit('change', name);
+    this.changeName(name);
   }
 }
 </script>
